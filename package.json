@@ -1,6 +1,9 @@
 {
   "name": "project-front-end",
   "version": "0.1.0",
+  "engines": {
+    "node": "17.9.1"
+  },
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
