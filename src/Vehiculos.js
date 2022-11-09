@@ -41,7 +41,7 @@ class Vehiculos extends Component {
                                 return (
                                     <Link to={`#vehicle${vehicleIndex+1}`} >
                                         <div className="vehicle-list__item">
-                                            <img src={vehicle1} alt="Un carrito" />
+                                            <img src={vehicle1} alt="Imagen del producto." />
                                             <h4>{vehicle.title}</h4>
                                             <p>$ {vehicle.price} COP</p>
                                         </div>
