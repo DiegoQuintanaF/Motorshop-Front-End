@@ -39,7 +39,7 @@ class Home extends Component {
 
         <main className="main-container">
           <div className="main__sections">
-            <a href="#Vehiculos" className="main__links">
+            <a href="/vehiculos" className="main__links">
               <div className='section'>
                 <img src={steering} alt="" />
                 <h3>Nuestro catalogó</h3>
@@ -51,7 +51,7 @@ class Home extends Component {
                 <h3>¿Dondé estamos?</h3>
               </div>
             </a>
-            <a href="#Cotizar" className="main__links">
+            <a href="/cotizar" className="main__links">
               <div className='section'>
                 <img src={handCoin} alt="" />
                 <h3>Cotiza aquí</h3>

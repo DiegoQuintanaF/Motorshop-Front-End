@@ -15,7 +15,7 @@ class NavComponent extends Component {
         <NavBarLeft>
           <NavLogo href="/" />
           <NavItem href="/vehiculos">Vehículos</NavItem>
-          <NavItem href="#Cotizar">Cotizar</NavItem>
+          <NavItem href="/cotizar">Cotizar</NavItem>
         </NavBarLeft>
         <NavBarRight>
           <NavShoppingCart />

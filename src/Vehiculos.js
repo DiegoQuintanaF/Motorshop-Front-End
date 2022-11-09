@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import BtnBold from "./components/BtnBold";
 import NavComponent from "./components/NavComponent";
 import Footer from "./components/Footer";
 import vehicle1 from "./assets/img/stock1.png";
-import vehicle2 from "./assets/img/stock2.png";
-import vehicle3 from "./assets/img/stock3.png";
-import vehicle4 from "./assets/img/stock4.png";
 import "./Vehiculos.css";
 
 
@@ -16,16 +12,16 @@ const vehicles_list = [
         price: "56,970.000,00"
     },
     {
-        title: "Toyota Prado",
-        price: "56,970.000,00"
+        title: "Toyota Kawaii",
+        price: "96,970.000,00"
     },
     {
-        title: "Toyota Prado",
-        price: "56,970.000,00"
+        title: "Toyota Mitsubishi",
+        price: "86,970.000,00"
     },
     {
-        title: "Toyota Prado",
-        price: "56,970.000,00"
+        title: "Toyota Otaku",
+        price: "156,970.000,00"
     }
 ]
 
@@ -53,20 +49,6 @@ class Vehiculos extends Component {
                                 )
                             })
                         }
-
-
-
-
-
-
-                        {/* <Link to="#vehicle2" >
-                            <div className="vehicle-list__item">
-                                <img src={vehicle1} alt="Un carrito" />
-                                <h4>Toyota Carolla</h4>
-                                <p>$ 56.970.000,00 COP</p>
-                            </div>
-                        </Link> */}
-
                     </div>
                 </div>
                 <Footer />
