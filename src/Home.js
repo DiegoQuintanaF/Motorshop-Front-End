@@ -89,41 +89,6 @@ class Home extends Component {
                 <BtnLight>Ver más</BtnLight>
               </a >  
             </div>
-            <div className="main__vehicle">
-              <img src={vehicle1} alt="" />
-              <h3>Toyota Corolla</h3>
-              <a href="#Cotizar" className="main__links">
-                <BtnLight>Ver más</BtnLight>
-              </a >  
-            </div>
-            <div className="main__vehicle">
-              <img src={vehicle2} alt="" />
-              <h3>Toyota Corolla</h3>
-              <a href="#Cotizar" className="main__links">
-                <BtnLight>Ver más</BtnLight>
-              </a >  
-            </div>
-            <div className="main__vehicle">
-              <img src={vehicle3} alt="" />
-              <h3>Toyota Corolla</h3>
-              <a href="#Cotizar" className="main__links">
-                <BtnLight>Ver más</BtnLight>
-              </a >  
-            </div>
-            <div className="main__vehicle">
-              <img src={vehicle4} alt="" />
-              <h3>Toyota Corolla</h3>
-              <a href="#Cotizar" className="main__links">
-                <BtnLight>Ver más</BtnLight>
-              </a >  
-            </div>
-            <div className="main__vehicle">
-              <img src={vehicle1} alt="" />
-              <h3>Toyota Corolla</h3>
-              <a href="#Cotizar" className="main__links">
-                <BtnLight>Ver más</BtnLight>
-              </a >  
-            </div>
           </div>
 
           <div className="main__about">

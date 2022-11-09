@@ -96,6 +96,7 @@ a {
 
 .shopping--cart:hover {
     filter: brightness(0.9);
+    cursor: pointer;
 }
 
 .shopping--cart:active {
@@ -114,4 +115,24 @@ a {
     place-items: center;
     color: #fff;
     font-size: 10px;
+}
+
+.navbar__user-icon {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+}
+
+.navbar__user-icon:hover {
+    filter: brightness(0.9);
+}
+
+.navbar__user-icon:active {
+    filter: brightness(0.8);
+}
+
+.navbar__user-icon img {
+    width: 30px;
+    height: 30px;
 }
