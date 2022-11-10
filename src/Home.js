@@ -43,13 +43,13 @@ class Home extends Component {
             <Link to="/vehiculos" className="main__links">
               <div className='section'>
                 <img src={steering} alt="" />
-                <h3>Nuestro catalogó</h3>
+                <h3>Nuestro catálogo</h3>
               </div>
             </Link>
             <Link to="#About" className="main__links">
               <div className='section'>
                 <img src={mapPin} alt="" />
-                <h3>¿Dondé estamos?</h3>
+                <h3>¿Dónde estamos?</h3>
               </div>
             </Link>
             <Link to="/cotizar" className="main__links">
@@ -67,28 +67,28 @@ class Home extends Component {
               <h3>Toyota Corolla</h3>
               <Link to="/cotizar" className="main__links">
                 <BtnLight>Ver más</BtnLight>
-              </Link>  
+              </Link>
             </div>
             <div className="main__vehicle">
               <img src={vehicle2} alt="" />
               <h3>Toyota Corolla</h3>
               <Link to="/cotizar" className="main__links">
                 <BtnLight>Ver más</BtnLight>
-              </Link >  
+              </Link >
             </div>
             <div className="main__vehicle">
               <img src={vehicle3} alt="" />
               <h3>Toyota Corolla</h3>
               <Link to="/cotizar" className="main__links">
                 <BtnLight>Ver más</BtnLight>
-              </Link >  
+              </Link >
             </div>
             <div className="main__vehicle">
               <img src={vehicle4} alt="" />
               <h3>Toyota Corolla</h3>
               <Link to="/cotizar" className="main__links">
                 <BtnLight>Ver más</BtnLight>
-              </Link >  
+              </Link >
             </div>
           </div>
 
