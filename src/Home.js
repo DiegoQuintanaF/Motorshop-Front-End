@@ -29,8 +29,6 @@ class Home extends Component {
       background: "#FFF",
     }
 
-    console.log(slides[0].url);
-
     return (
       <div>
         <NavComponent />
