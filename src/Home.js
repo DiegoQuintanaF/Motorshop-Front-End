@@ -29,8 +29,6 @@ class Home extends Component {
       background: "#FFF",
     }
 
-    console.log(slides[0].url);
-
     return (
       <div>
         <NavComponent />
@@ -46,12 +44,12 @@ class Home extends Component {
                 <h3>Nuestro catálogo</h3>
               </div>
             </Link>
-            <Link to="#About" className="main__links">
+            <a href="#About" className="main__links">
               <div className='section'>
                 <img src={mapPin} alt="" />
                 <h3>¿Dónde estamos?</h3>
               </div>
-            </Link>
+            </a>
             <Link to="/cotizar" className="main__links">
               <div className='section'>
                 <img src={handCoin} alt="" />
