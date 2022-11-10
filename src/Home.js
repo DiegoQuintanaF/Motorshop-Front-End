@@ -10,6 +10,7 @@ import vehicle1 from './assets/img/stock1.png';
 import vehicle2 from './assets/img/stock2.png';
 import vehicle3 from './assets/img/stock3.png';
 import vehicle4 from './assets/img/stock4.png';
+import { Link } from 'react-router-dom';
 import "./Home.css";
 
 
@@ -39,24 +40,24 @@ class Home extends Component {
 
         <main className="main-container">
           <div className="main__sections">
-            <a href="/vehiculos" className="main__links">
+            <Link to="/vehiculos" className="main__links">
               <div className='section'>
                 <img src={steering} alt="" />
                 <h3>Nuestro catalogó</h3>
               </div>
-            </a>
-            <a href="#About" className="main__links">
+            </Link>
+            <Link to="#About" className="main__links">
               <div className='section'>
                 <img src={mapPin} alt="" />
                 <h3>¿Dondé estamos?</h3>
               </div>
-            </a>
-            <a href="/cotizar" className="main__links">
+            </Link>
+            <Link to="/cotizar" className="main__links">
               <div className='section'>
                 <img src={handCoin} alt="" />
                 <h3>Cotiza aquí</h3>
               </div>
-            </a>
+            </Link>
           </div>
           <h1 className="main__title">¡Encuentra tu próximo vehículo!</h1>
 
@@ -64,30 +65,30 @@ class Home extends Component {
             <div className="main__vehicle">
               <img src={vehicle1} alt="" />
               <h3>Toyota Corolla</h3>
-              <a href="#Cotizar" className="main__links">
+              <Link to="/cotizar" className="main__links">
                 <BtnLight>Ver más</BtnLight>
-              </a >  
+              </Link>  
             </div>
             <div className="main__vehicle">
               <img src={vehicle2} alt="" />
               <h3>Toyota Corolla</h3>
-              <a href="#Cotizar" className="main__links">
+              <Link to="/cotizar" className="main__links">
                 <BtnLight>Ver más</BtnLight>
-              </a >  
+              </Link >  
             </div>
             <div className="main__vehicle">
               <img src={vehicle3} alt="" />
               <h3>Toyota Corolla</h3>
-              <a href="#Cotizar" className="main__links">
+              <Link to="/cotizar" className="main__links">
                 <BtnLight>Ver más</BtnLight>
-              </a >  
+              </Link >  
             </div>
             <div className="main__vehicle">
               <img src={vehicle4} alt="" />
               <h3>Toyota Corolla</h3>
-              <a href="#Cotizar" className="main__links">
+              <Link to="/cotizar" className="main__links">
                 <BtnLight>Ver más</BtnLight>
-              </a >  
+              </Link >  
             </div>
           </div>
 
