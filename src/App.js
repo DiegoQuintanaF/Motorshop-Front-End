@@ -5,6 +5,7 @@ import Login from './Login.js';
 import SingUp from './SingUp.js';
 import Vehiculos from './Vehiculos.js';
 import Cotizar from './Cotizar.js';
+import Carrito from './Carrito.js';
 
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
           <Route path="/singup" element={<SingUp />} /> 
           <Route path="/vehiculos" element={<Vehiculos />} />
           <Route path='/cotizar' element={<Cotizar />} />
+          <Route path='/carrito' element={<Carrito />} />
         </Routes>
       </div>
     );
