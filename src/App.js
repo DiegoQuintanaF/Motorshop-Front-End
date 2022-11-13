@@ -6,6 +6,8 @@ import SingUp from './SingUp.js';
 import Vehiculos from './Vehiculos.js';
 import Cotizar from './Cotizar.js';
 import Carrito from './Carrito.js';
+import ViewVehicle from './ViewVehicle.js';
+import AddedCart from './AddedCart.js';
 
 
 class App extends Component {
@@ -19,6 +21,19 @@ class App extends Component {
           <Route path="/vehiculos" element={<Vehiculos />} />
           <Route path='/cotizar' element={<Cotizar />} />
           <Route path='/carrito' element={<Carrito />} />
+          <Route path="/detalle/:id" element={<ViewVehicle />} />
+          <Route path="/added-cart/:id" element={<AddedCart />} />
+
+          {/* <Route path="/pay-single-cart/:id" element={<PaySingleVehicle />} />
+          <Route path="/pay-shopping-cart" element={<PayShoppingCart />} />
+          <Route path="/pay-success" element={<PaySuccess />} />
+          <Route path="/profile/edit-enventory/add" element={<AddVehicle />} />
+          <Route path="/profile/edit-enventory/edit" element={<EditVehicle />} />
+          <Route path="/profile/edit-enventory" element={<EditEnventary />} />
+          <Route path="/profile/edit-profile" element={<EditProfile />} />
+          <Route path="/profile-edit" element={<ProfileEdit />} /> */}
+
+          <Route path="*" element={<h1>Error 404</h1>} />
         </Routes>
       </div>
     );

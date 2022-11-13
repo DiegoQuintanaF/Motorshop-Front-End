@@ -9,19 +9,23 @@ import "./Vehiculos.css";
 const vehicles_list = [
     {
         title: "Toyota Prado",
-        price: "56,970.000,00"
+        price: "56,970.000,00",
+        id: 1
     },
     {
         title: "Toyota Kawaii",
-        price: "96,970.000,00"
+        price: "96,970.000,00",
+        id: 2
     },
     {
         title: "Toyota Mitsubishi",
-        price: "86,970.000,00"
+        price: "87,970.000,00",
+        id: 3
     },
     {
         title: "Toyota Otaku",
-        price: "156,970.000,00"
+        price: "156,970.000,00",
+        id: 4
     }
 ]
 
@@ -37,9 +41,9 @@ class Vehiculos extends Component {
                     <h3>Nuestro catalogo.</h3>
                     <div className="vehicles-list">
                         {
-                            vehicles_list.map((vehicle, vehicleIndex) => {
+                            vehicles_list.map((vehicle) => {
                                 return (
-                                    <Link to={`#vehicle${vehicleIndex+1}`} >
+                                    <Link to={`/detalle/${vehicle.id}`} >
                                         <div className="vehicle-list__item">
                                             <img src={vehicle1} alt="Imagen del producto." />
                                             <h4>{vehicle.title}</h4>
