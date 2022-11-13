@@ -47,7 +47,7 @@ class ViewVehicle extends Component {
                                 <p>Hasta <span>108 cuotas</span> ¡Endeudate toda la vida si quieres!</p>
                             </article>
                             <div className="buttons-actions">
-                                <Link to={`/`}>
+                                <Link to={`/pay-single-cart/${vehicle.id}`}>
                                     <BtnBold>Comprar</BtnBold>
                                 </Link>
                                 <Link to={`/added-cart/${vehicle.id}`}>

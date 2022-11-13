@@ -85,7 +85,7 @@ class Carrito extends Component {
                     </div>
                     <div className='carrito__total'>
                         <p>Total: ${this.state.total}</p>
-                        <Link to='/checkout'>
+                        <Link to='/pay-shopping-cart'>
                             <BtnBold>Pagar</BtnBold>
                         </Link>
                     </div>
