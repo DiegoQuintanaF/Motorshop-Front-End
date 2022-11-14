@@ -8,7 +8,7 @@ class NavUser extends Component {
     render() {
         return (
             <li className="navbar__user-icon">
-                <Link to="#my_account">
+                <Link to="/profile">
                     <img src={icon} alt="" />
                 </Link>
             </li>

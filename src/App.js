@@ -10,7 +10,7 @@ import ViewVehicle from './ViewVehicle.js';
 import AddedCart from './AddedCart.js';
 import PaySingleCart from './PaySingleCart.js';
 import PayShoppingCart from './PayShoppingCart.js';
-
+import Profile from './Profile.js';
 
 class App extends Component {
   render() {
@@ -28,7 +28,8 @@ class App extends Component {
 
           <Route path="/pay-single-cart/:id" element={<PaySingleCart />} />
           <Route path="/pay-shopping-cart" element={<PayShoppingCart />} />
-
+          <Route path="/profile" element={<Profile />} />
+          
           {/* <Route path="/profile/edit-enventory/add" element={<AddVehicle />} />
           <Route path="/profile/edit-enventory/edit" element={<EditVehicle />} />
           <Route path="/profile/edit-enventory" element={<EditEnventary />} />
