@@ -10,10 +10,7 @@ const dataVehicle = {
     id: 1
 }
 
-const { title, price, id } = dataVehicle;
-
 const copAmount = Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(dataVehicle.price);
-
 
 class PaySingleCart extends Component {
     render() {
@@ -23,7 +20,7 @@ class PaySingleCart extends Component {
                 <div className="single-pay--container">
                     <div className="single-pay__content">
                         <article>
-                            <h2>{title}</h2>
+                            <h2>{dataVehicle.title}</h2>
                             <p><span>Total a pagar:</span> {copAmount}</p>
                         </article>
                         <form>

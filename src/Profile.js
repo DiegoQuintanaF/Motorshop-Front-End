@@ -16,9 +16,9 @@ const dataUser = {
     password: '********',
 }
 let typeAccount = '';
-if (dataUser.account == 1) {
+if (dataUser.account === 1) {
     typeAccount = 'Cliente';
-} else if (dataUser.account == 2) {
+} else if (dataUser.account === 2) {
     typeAccount = 'Administrador';
 } else {
     typeAccount = 'Super-administrador';
@@ -34,7 +34,7 @@ class Profile extends Component {
                 <div className="profile__container">
                     <div className="profile__info">
                         <picture>
-                            <img src={user} style={{height: "150px"}} alt="" />
+                            <img src={user} style={{ height: "150px" }} alt="" />
                         </picture>
                         <section>
                             <h4>Datos personales</h4>
@@ -63,7 +63,7 @@ class Profile extends Component {
                                 ) : (null)
                         }
                         {
-                            dataUser.account == 3
+                            dataUser.account === 3
                                 ? (
                                     <div className="profile__admin-edit-admin">
                                         <h4>Editar Admins</h4>

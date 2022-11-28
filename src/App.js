@@ -23,7 +23,7 @@ class App extends Component {
           <Route path="/vehiculos" element={<Vehiculos />} />
           <Route path='/cotizar' element={<Cotizar />} />
           <Route path='/carrito' element={<Carrito />} />
-          <Route path="/detalle/:id" element={<ViewVehicle />} />
+          <Route path="/detalle/:product" element={<ViewVehicle />} />
           <Route path="/added-cart/:id" element={<AddedCart />} />
 
           <Route path="/pay-single-cart/:id" element={<PaySingleCart />} />

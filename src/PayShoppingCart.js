@@ -29,9 +29,9 @@ const dataVehicle = [
 
 let totalPrice = 0;
 
-for (let i = 0; i < dataVehicle.length; i++) {
-    totalPrice += dataVehicle[i].price;
-}
+dataVehicle.forEach((carro) => {
+    totalPrice += carro.price;
+});
 
 const copAmount = Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(totalPrice);
 
@@ -46,11 +46,9 @@ class PayShoppingCart extends Component {
                         <article>
                             <h2>Items a comprar:</h2>
                             {
-                                dataVehicle.map((item, index) => {
+                                dataVehicle.map((item) => {
                                     return (
-                                            
-                                            <p>{item.title}: {Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(item.price)}</p>
-                                            
+                                        <p>{item.title}: {Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(item.price)}</p>
                                     )
                                 })
                             }

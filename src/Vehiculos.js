@@ -2,61 +2,62 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import NavComponent from "./components/NavComponent";
 import Footer from "./components/Footer";
-import vehicle1 from "./assets/img/stock1.png";
 import "./Vehiculos.css";
 
-
-const vehicles_list = [
-    {
-        title: "Toyota Prado",
-        price: "56,970.000,00",
-        id: 1
-    },
-    {
-        title: "Toyota Kawaii",
-        price: "96,970.000,00",
-        id: 2
-    },
-    {
-        title: "Toyota Mitsubishi",
-        price: "87,970.000,00",
-        id: 3
-    },
-    {
-        title: "Toyota Otaku",
-        price: "156,970.000,00",
-        id: 4
-    }
-]
-
-
-
-
 class Vehiculos extends Component {
+    state = {
+        stock: [],
+        status: false
+    }
+
+    cargarDatos = () => {
+        const options = { method: 'GET', headers: { Authorization: 'Basic Og==' } };
+        fetch('https://servicio-stock.onrender.com/vehicles', options)
+            .then(response => response.json())
+            .then(response => {
+                this.setState({
+                    stock: response.vehicles,
+                    status: true
+                })
+            })
+            .catch(err => console.error(err));
+    }
+
+    componentDidMount() {
+        this.cargarDatos();
+    }
+
     render() {
+        console.log(this.state.stock);
+
         return (
             <div>
                 <NavComponent />
                 <div className="vehicles-container">
                     <h3>Nuestro catalogo.</h3>
-                    <div className="vehicles-list">
-                        {
-                            vehicles_list.map((vehicle) => {
-                                return (
-                                    <Link to={`/detalle/${vehicle.id}`} >
-                                        <div className="vehicle-list__item">
-                                            <img src={vehicle1} alt="Imagen del producto." />
-                                            <h4>{vehicle.title}</h4>
-                                            <p>$ {vehicle.price} COP</p>
-                                        </div>
-                                    </Link>
-                                )
-                            })
-                        }
-                    </div>
+                    {
+                        this.state.status === true &&
+                        (
+                            <div className="vehicles-list">
+                                {
+                                    this.state.stock.map((item) => {
+                                        return (
+                                            <Link to={`/detalle/${item.id}`} >
+                                                <div className="vehicle-list__item" >
+                                                    <img src={item.image} alt="Imagen del producto." />
+                                                    <h4>{item.name}</h4>
+                                                    <p>{Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(item.price)} COP</p>
+                                                </div>
+                                            </Link>
+                                        )
+                                    })
+                                }
+                            </div>
+                        )
+                    }
                 </div>
                 <Footer />
-            </div>
+            </div >
         )
     }
 }

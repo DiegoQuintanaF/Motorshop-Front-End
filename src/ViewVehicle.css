@@ -58,6 +58,9 @@
     color: #5A98B4;
 }
 
-
+.img-auto-view {
+    width: 500px;
+    object-fit: cover;
+}
 
 

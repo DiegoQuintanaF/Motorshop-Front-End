@@ -50,15 +50,8 @@ const listaCarros = [
 ]
 
 class Carrito extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            total: 0,
-        }
-    }
-
     render() {
+        let totalPrice = 0;
         return (
             <div>
                 
@@ -68,7 +61,7 @@ class Carrito extends Component {
                         <h1>Carrito</h1>
                         {
                             listaCarros.map((carro, indexCarro) => {
-                                this.state.total += carro.price;
+                                totalPrice += carro.price;
                                 return (
                                     <div className='carrito__item' id={`item${indexCarro+1}`}>
                                         <img className="carrito__item__img" src={vehicle} alt='carro' />
@@ -84,7 +77,7 @@ class Carrito extends Component {
                         }
                     </div>
                     <div className='carrito__total'>
-                        <p>Total: ${this.state.total}</p>
+                        <p>Total: ${totalPrice}</p>
                         <Link to='/pay-shopping-cart'>
                             <BtnBold>Pagar</BtnBold>
                         </Link>

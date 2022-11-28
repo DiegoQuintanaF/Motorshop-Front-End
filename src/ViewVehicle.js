@@ -3,38 +3,55 @@ import BtnBold from "./components/BtnBold";
 import BtnNormal from "./components/BtnNormal";
 import NavComponent from "./components/NavComponent";
 import Footer from "./components/Footer";
-import vehiclePhoto from "./assets/img/stock1.png";
+// import vehiclePhoto from "./assets/img/stock1.png";
 import { Link } from "react-router-dom";
 import './ViewVehicle.css';
 import PdfIcon from "./assets/icons/picture-as-pdf.svg";
 
-const vehicle = {
-    id: 1,
-    name: "Renault Otaku 2022",
-    price: "53789000",
-}
-
-
-const copAmount = Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(vehicle.price);
 
 class ViewVehicle extends Component {
+
+    state = {
+        vehicle: {},
+        status: false
+    }
+
+    cargarDatos = () => {
+        const options = { method: 'GET', headers: { Authorization: 'Basic Og==' } };
+        let path = window.location.pathname;
+        let id = path.split("/")[2];
+
+        fetch(`https://servicio-stock.onrender.com/vehicle/${id}`, options)
+            .then(response => response.json())
+            .then(response => {
+                this.setState({
+                    vehicle: response.vehicle,
+                    status: true
+                })
+            })
+            .catch(err => console.error(err));
+    }
+
+
+    componentDidMount() {
+        this.cargarDatos();
+    }
+
     render() {
+        let { vehicle } = this.state;
+        const copAmount = Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(vehicle.price);
         return (
             <div id="view-vehicle">
                 <NavComponent />
                 <div className="info-vehicle-container">
                     <div className="info-vehicle__left">
                         <picture>
-                            <img src={vehiclePhoto} alt="" />
+                            <img className="img-auto-view" src={vehicle.image} alt="" />
                         </picture>
                         <div>
                             <h2>Description</h2>
                             <p>
-                                Cupidatat irure do quis incididunt duis quis
-                                non id dolor aliquip quis deserunt culpa labore.
-                                Irure consequat adipisicing voluptate
-                                reprehenderit. Esse consectetur excepteur sint
-                                eiusmod quis elit magna.
+                                {vehicle.description}
                             </p>
                         </div>
                     </div>
@@ -57,10 +74,12 @@ class ViewVehicle extends Component {
                         </div>
                         <div>
                             <h2>Ficha tecnica</h2>
-                            <picture className="picture-download">
-                                <span>Descargar </span>
-                                <img src={PdfIcon} alt="" />
-                            </picture>
+                            <a href={vehicle.data_sheet}>
+                                <picture className="picture-download">
+                                    <span>Descargar </span>
+                                    <img src={PdfIcon} alt="" />
+                                </picture>
+                            </a>
                         </div>
                     </div>
                 </div>
