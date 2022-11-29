@@ -7,7 +7,8 @@ import "./Vehiculos.css";
 class Vehiculos extends Component {
     state = {
         stock: [],
-        status: false
+        status: false,
+        isLogged: true
     }
 
     cargarDatos = () => {
@@ -25,11 +26,10 @@ class Vehiculos extends Component {
 
     componentDidMount() {
         this.cargarDatos();
-    }
+    }    
 
     render() {
         console.log(this.state.stock);
-
         return (
             <div>
                 <NavComponent />

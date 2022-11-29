@@ -8,6 +8,25 @@ import "./AddedCart.css";
 
 
 class AddedCart extends Component {
+    
+    addCart = () => {
+        const options = { method: "GET" };
+        let path = window.location.pathname;
+        let id = path.split("/")[2];
+        console.log("id", id)
+        
+        fetch(`https://sales-cart-cot.onrender.com/shopcar/${id}`, options)
+            .then((response) => response.json())
+            .then((response) => {
+                console.log(response.messeger);
+            })
+            .catch((err) => console.error(err));
+    }
+
+    componentDidMount() {
+        this.addCart();
+    }
+
     render() {
         return (
             <div>

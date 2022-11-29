@@ -9,6 +9,9 @@ import './ViewVehicle.css';
 import PdfIcon from "./../assets/icons/picture-as-pdf.svg";
 
 
+
+let idProduct = 0;
+
 class ViewVehicle extends Component {
 
     state = {
@@ -17,9 +20,11 @@ class ViewVehicle extends Component {
     }
 
     cargarDatos = () => {
-        const options = { method: 'GET', headers: { Authorization: 'Basic Og==' } };
+        const options = { method: 'GET' };
         let path = window.location.pathname;
         let id = path.split("/")[2];
+        idProduct = id;
+        console.log("id", id);
 
         fetch(`https://servicio-stock.onrender.com/vehicle/${id}`, options)
             .then(response => response.json())
@@ -33,12 +38,15 @@ class ViewVehicle extends Component {
     }
 
 
+
+
     componentDidMount() {
         this.cargarDatos();
     }
 
     render() {
         let { vehicle } = this.state;
+        console.log(vehicle);
         const copAmount = Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(vehicle.price);
         return (
             <div id="view-vehicle">
@@ -64,10 +72,10 @@ class ViewVehicle extends Component {
                                 <p>Hasta <span>108 cuotas</span> ¡Endeudate toda la vida si quieres!</p>
                             </article>
                             <div className="buttons-actions">
-                                <Link to={`/pay-single-cart/${vehicle.id}`}>
+                                <Link to={`/pay-single-cart/${idProduct}`}>
                                     <BtnBold>Comprar</BtnBold>
                                 </Link>
-                                <Link to={`/added-cart/${vehicle.id}`}>
+                                <Link to={`/added-cart/${idProduct}`}>
                                     <BtnNormal>Agregar al carrito</BtnNormal>
                                 </Link>
                             </div>

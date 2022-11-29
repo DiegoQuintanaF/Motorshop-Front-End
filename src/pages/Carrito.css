@@ -15,6 +15,7 @@
     height: 100%;
     padding: 0 10px;
     display: grid;
+    grid-template-rows: repeat(auto-fill, 92px);
     grid-auto-flow: row;
     gap: 10px;  
 }
@@ -41,11 +42,13 @@
 
 .carrito__item__img {
     height: 60px;
+    max-width: 110px;
 }
 
 .carrito__delete {
     width: 30px;
     justify-self: center;
+    visibility: hidden;
 }
 
 .carrito__delete:hover {

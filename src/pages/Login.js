@@ -4,6 +4,35 @@ import logo from "./../assets/img/motorshop_logo.png";
 import "./Login.css";
 
 class Login extends Component {
+    state = {
+        token: " ",
+        status: false
+    };
+
+    getToken  = (event) => {
+        event.preventDefault();
+
+        const email = event.target[0].value;
+        const password = event.target[1].value;
+
+        const options = { method: 'POST' };
+
+        fetch(`https://login-normal.onrender.com/api/login?email=${email}&password=${password}`, options)
+            .then(response => response.json())
+            .then(response => {
+                if (response.Message) {
+                    alert(response.Message);
+                } else {
+                    this.setState( { 
+                        token: `${response.token}`, 
+                        status: true 
+                    } );
+                }
+                console.log(`Email: ${email} \nPassword: ${password}`);
+                console.log(this.state.token);
+            })    
+    }
+
     render() {
         return (
             <div className="background">
@@ -14,13 +43,23 @@ class Login extends Component {
                                 <img src={logo} alt="logo motorshop" />
                             </Link>
 
-                            <form action="" class="flex">
+                            <form onSubmit={this.getToken} class="flex">
                                 <h2>¡Accede a tu cuenta!</h2>
-                                <label for="e-mail">
-                                    <input type="text" name="email" id="e-mail" placeholder="Correo eléctronico" />
+                                <label htmlFor="e-mail">
+                                    <input
+                                        type="text"
+                                        name="email"
+                                        id="e-mail"
+                                        placeholder="Correo eléctronico"
+                                    />
                                 </label>
-                                <label for="pass">
-                                    <input type="password" name="password" id="pass" placeholder="Contraseña" />
+                                <label htmlFor="pass">
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        id="pass"
+                                        placeholder="Contraseña"
+                                    />
                                 </label>
                                 <Link to="/singup">Registrarse.</Link>
 
@@ -28,15 +67,13 @@ class Login extends Component {
                             </form>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="content flex">
                     <p>Motorshop | Venta de automóviles </p>
                 </div>
-
             </div>
-        )
+        );
     }
 }
 
