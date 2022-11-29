@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import NavComponent from "./components/NavComponent";
-import Footer from "./components/Footer";
+import NavComponent from "./../components/NavComponent";
+import Footer from "./../components/Footer";
 import "./Vehiculos.css";
 
 class Vehiculos extends Component {

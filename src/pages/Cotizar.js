@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import NavComponent from './components/NavComponent';
-import Footer from './components/Footer';
-import carrito from './assets/img/stock1.png';
+import NavComponent from './../components/NavComponent';
+import Footer from './../components/Footer';
+import carrito from './../assets/img/stock1.png';
 import './Cotizar.css';
 
 

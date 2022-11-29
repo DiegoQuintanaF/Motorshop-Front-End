@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import BtnBold from "./components/BtnBold";
-import BtnNormal from "./components/BtnNormal";
-import NavComponent from "./components/NavComponent";
-import Footer from "./components/Footer";
+import BtnBold from "./../components/BtnBold";
+import BtnNormal from "./../components/BtnNormal";
+import NavComponent from "./../components/NavComponent";
+import Footer from "./../components/Footer";
 // import vehiclePhoto from "./assets/img/stock1.png";
 import { Link } from "react-router-dom";
 import './ViewVehicle.css';
-import PdfIcon from "./assets/icons/picture-as-pdf.svg";
+import PdfIcon from "./../assets/icons/picture-as-pdf.svg";
 
 
 class ViewVehicle extends Component {

@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './Home.js';
-import Login from './Login.js';
-import SingUp from './SingUp.js';
-import Vehiculos from './Vehiculos.js';
-import Cotizar from './Cotizar.js';
-import Carrito from './Carrito.js';
-import ViewVehicle from './ViewVehicle.js';
-import AddedCart from './AddedCart.js';
-import PaySingleCart from './PaySingleCart.js';
-import PayShoppingCart from './PayShoppingCart.js';
-import Profile from './Profile.js';
+import Home from './pages/Home.js';
+import Login from './pages/Login.js';
+import SingUp from './pages/SingUp.js';
+import Vehiculos from './pages/Vehiculos.js';
+import Cotizar from './pages/Cotizar.js';
+import Carrito from './pages/Carrito.js';
+import ViewVehicle from './pages/ViewVehicle.js';
+import AddedCart from './pages/AddedCart.js';
+import PaySingleCart from './pages/PaySingleCart.js';
+import PayShoppingCart from './pages/PayShoppingCart.js';
+import Profile from './pages/Profile.js';
 
 class App extends Component {
   render() {

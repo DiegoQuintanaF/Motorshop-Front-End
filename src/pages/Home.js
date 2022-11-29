@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import NavComponent from './components/NavComponent';
-import ImageSlider from './components/ImageSlider';
-import Footer from './components/Footer';
-import steering from './assets/icons/steering-2.svg';
-import mapPin from './assets/icons/map-pin-2.svg';
-import handCoin from './assets/icons/hand-coin.svg';
-import BtnLight from './components/BtnLight';
-import vehicle1 from './assets/img/stock1.png';
-import vehicle2 from './assets/img/stock2.png';
-import vehicle3 from './assets/img/stock3.png';
-import vehicle4 from './assets/img/stock4.png';
+import NavComponent from './../components/NavComponent.js';
+import ImageSlider from './../components/ImageSlider';
+import Footer from './../components/Footer';
+import steering from './../assets/icons/steering-2.svg';
+import mapPin from './../assets/icons/map-pin-2.svg';
+import handCoin from './../assets/icons/hand-coin.svg';
+import BtnLight from './../components/BtnLight';
+import vehicle1 from './../assets/img/stock1.png';
+import vehicle2 from './../assets/img/stock2.png';
+import vehicle3 from './../assets/img/stock3.png';
+import vehicle4 from './../assets/img/stock4.png';
 import { Link } from 'react-router-dom';
 import "./Home.css";
 

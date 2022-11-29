@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import NavComponent from './components/NavComponent';
-import Footer from './components/Footer';
+import NavComponent from './../components/NavComponent';
+import Footer from './../components/Footer';
 import './PaySingleCart.css';
 
 

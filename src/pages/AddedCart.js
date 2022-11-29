@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import NavComponent from "./components/NavComponent";
-import Footer from "./components/Footer";
-import BtnBold from "./components/BtnBold";
-import check from "./assets/icons/check-circle.svg";
+import NavComponent from "./../components/NavComponent";
+import Footer from "./../components/Footer";
+import BtnBold from "./../components/BtnBold";
+import check from "./../assets/icons/check-circle.svg";
 import "./AddedCart.css";
 
 

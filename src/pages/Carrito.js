@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import BtnBold from './components/BtnBold';
-import NavComponent from './components/NavComponent';
-import vehicle from './assets/img/stock1.png';
-import x_circle from './assets/icons/x-circle.svg';
+import BtnBold from './../components/BtnBold';
+import NavComponent from './../components/NavComponent';
+import vehicle from './../assets/img/stock1.png';
+import x_circle from './../assets/icons/x-circle.svg';
 import './Carrito.css';
 
 const listaCarros = [

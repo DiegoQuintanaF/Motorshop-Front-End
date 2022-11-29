@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import NavComponent from './components/NavComponent';
-import Footer from './components/Footer';
-import user from './assets/icons/user-circle.svg';
+import NavComponent from './../components/NavComponent';
+import Footer from './../components/Footer';
+import user from './../assets/icons/user-circle.svg';
 import { Link } from 'react-router-dom';
-import userSearch from './assets/icons/user-search.svg';
-import listSearch from './assets/icons/list-search.svg';
-import edit from './assets/icons/edit.svg';
+import userSearch from './../assets/icons/user-search.svg';
+import listSearch from './../assets/icons/list-search.svg';
+import edit from './../assets/icons/edit.svg';
 import './Profile.css';
 
 
