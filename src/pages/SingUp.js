@@ -4,6 +4,12 @@ import logo from "./../assets/img/motorshop_logo.png";
 import "./SingUp.css";
 
 class SingUp extends Component {
+
+    singUpEvent = (event) => {
+        event.preventDefault();
+        window.location.href = "/";
+    }
+
     render() {
         return (
             <div className="background">
@@ -14,7 +20,7 @@ class SingUp extends Component {
                                 <img src={logo} alt="logo motorshop" />
                             </Link>
 
-                            <form action="" class="flex">
+                            <form onSubmit={this.singUpEvent} class="flex">
                                 <h2>!Crea tu cuenta!</h2>
                                 <label htmlFor="u-name">
                                     <input type="text" name="name" id="u-name" placeholder="Nombre" />
