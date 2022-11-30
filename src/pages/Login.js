@@ -36,9 +36,9 @@ class Login extends Component {
     render() {
         return (
             <div className="background">
-                <div class="header">
-                    <div class="inner-header flex">
-                        <div class="login">
+                <div className="header">
+                    <div className="inner-header flex">
+                        <div className="login">
                             <Link to="/">
                                 <img src={logo} alt="logo motorshop" />
                             </Link>
@@ -63,13 +63,13 @@ class Login extends Component {
                                 </label>
                                 <Link to="/singup">Registrarse.</Link>
 
-                                <input type="submit" class="login-btn" value="Iniciar sesión" />
+                                <input type="submit" className="login-btn" value="Iniciar sesión" />
                             </form>
                         </div>
                     </div>
                 </div>
 
-                <div class="content flex">
+                <div className="content flex">
                     <p>Motorshop | Venta de automóviles </p>
                 </div>
             </div>

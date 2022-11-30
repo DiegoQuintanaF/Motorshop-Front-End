@@ -8,7 +8,6 @@ class Vehiculos extends Component {
     state = {
         stock: [],
         status: false,
-        isLogged: true
     }
 
     cargarDatos = () => {
@@ -36,13 +35,20 @@ class Vehiculos extends Component {
                 <div className="vehicles-container">
                     <h3>Nuestro catalogo.</h3>
                     {
+                        this.state.status === false && (
+                            <div className="loading">
+                                <h1>Cargando...</h1>
+                            </div>
+                        )   
+                    }
+                    {
                         this.state.status === true &&
                         (
                             <div className="vehicles-list">
                                 {
-                                    this.state.stock.map((item) => {
+                                    this.state.stock.map((item, index) => {
                                         return (
-                                            <Link to={`/detalle/${item.id}`} >
+                                            <Link key={index} to={`/detalle/${item.id}`} >
                                                 <div className="vehicle-list__item" >
                                                     <img src={item.image} alt="Imagen del producto." />
                                                     <h4>{item.name}</h4>

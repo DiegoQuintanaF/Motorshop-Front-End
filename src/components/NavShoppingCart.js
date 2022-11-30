@@ -28,12 +28,12 @@ class NavShoppingCart extends Component {
 
     render() {
         return (
-            <li class="navbar__nav-item shopping--cart">
+            <li className="navbar__nav-item shopping--cart">
                 <Link className="shopping-cart--link" to="/carrito">
                     <img src={shopping_cart} alt="shopping_cart" />
                     {
                         (this.state.count > 0) && (
-                            <span class="shopping--cart__counter">
+                            <span className="shopping--cart__counter">
                                 {this.state.count}
                             </span>
                         )
