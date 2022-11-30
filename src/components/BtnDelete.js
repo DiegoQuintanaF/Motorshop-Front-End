@@ -8,8 +8,6 @@ class BtnDelete extends Component {
             .then(response => response.json())
             .then(response => console.log("Deleted"))
             .catch(err => console.error(err));
-
-        window.location.reload();
     }
 
     render() {
