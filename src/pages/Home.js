@@ -6,15 +6,34 @@ import steering from './../assets/icons/steering-2.svg';
 import mapPin from './../assets/icons/map-pin-2.svg';
 import handCoin from './../assets/icons/hand-coin.svg';
 import BtnLight from './../components/BtnLight';
-import vehicle1 from './../assets/img/stock1.png';
-import vehicle2 from './../assets/img/stock2.png';
 import vehicle3 from './../assets/img/stock3.png';
-import vehicle4 from './../assets/img/stock4.png';
 import { Link } from 'react-router-dom';
 import "./Home.css";
 
 
 class Home extends Component {
+  state = {
+    vehicles: [],
+    status: false
+  }
+
+  getVehicles = () => {
+    const options = { method: 'GET', headers: { Authorization: 'Basic Og==' } };
+    fetch('https://servicio-stock.onrender.com/vehicles', options)
+      .then(response => response.json())
+      .then(response => {
+        this.setState({
+          vehicles: response.vehicles,
+          status: true
+        })
+      })
+      .catch(err => console.error(err));
+  }
+
+  componentDidMount() {
+    this.getVehicles();
+  }
+
   render() {
 
     const slides = [
@@ -28,6 +47,7 @@ class Home extends Component {
       height: "480px",
       background: "#FFF",
     }
+
 
     return (
       <div>
@@ -60,34 +80,26 @@ class Home extends Component {
           <h1 className="main__title">¡Encuentra tu próximo vehículo!</h1>
 
           <div className="main__vehicles">
-            <div className="main__vehicle">
-              <img src={vehicle1} alt="" />
-              <h3>Toyota Corolla</h3>
-              <Link to="/cotizar" className="main__links">
-                <BtnLight>Ver más</BtnLight>
-              </Link>
-            </div>
-            <div className="main__vehicle">
-              <img src={vehicle2} alt="" />
-              <h3>Toyota Corolla</h3>
-              <Link to="/cotizar" className="main__links">
-                <BtnLight>Ver más</BtnLight>
-              </Link >
-            </div>
-            <div className="main__vehicle">
-              <img src={vehicle3} alt="" />
-              <h3>Toyota Corolla</h3>
-              <Link to="/cotizar" className="main__links">
-                <BtnLight>Ver más</BtnLight>
-              </Link >
-            </div>
-            <div className="main__vehicle">
-              <img src={vehicle4} alt="" />
-              <h3>Toyota Corolla</h3>
-              <Link to="/cotizar" className="main__links">
-                <BtnLight>Ver más</BtnLight>
-              </Link >
-            </div>
+
+
+            {
+              this.state.status === false ? (
+                <div className="loading">
+                  <h1>Cargando...</h1>
+                </div>
+              ) : this.state.vehicles.map((item, index) => {
+                if (index > 3) return;
+                return (
+                  <div key={index} className="main__vehicle">
+                    <img src={item.image} alt="" />
+                    <h3>{item.name}</h3>
+                    <Link to={`/detalle/${item.id}`} className="main__links">
+                      <BtnLight>Ver más</BtnLight>
+                    </Link>
+                  </div> 
+                )
+              })
+            }
           </div>
 
           <div className="main__about">
@@ -96,12 +108,10 @@ class Home extends Component {
                 ¿Qué es MotorShop?
               </h2>
               <p>
-                Exercitation sint ea amet pariatur quis nulla tempor esse qui
-                eiusmod consectetur velit sunt aliqua. Pariatur officia ut ad
-                dolor ipsum eiusmod. Nulla aliquip magna tempor nisi ullamco
-                nostrud veniam sint occaecat ullamco proident cupidatat aliquip
-                sit. Adipisicing id anim duis culpa cupidatat cillum qui amet
-                proident.
+                Motorshop es una empresa empresa colombiana, ubicada en Cartagena de Indias,
+                que se dedica a la venta de vehículos, con la finalidad de brindar el mejor
+                servicio de calidad a nuestros clientes. Nos esforzamos al máximo para
+                que nuestros clientes puedan decir que su experiencia con nosotros fue satisfactoria.
               </p>
             </div>
             <div className="main__about--img">
