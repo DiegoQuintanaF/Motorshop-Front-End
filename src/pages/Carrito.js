@@ -5,6 +5,7 @@ import NavComponent from './../components/NavComponent';
 import vehicle from './../assets/img/stock1.png';
 import x_circle from './../assets/icons/x-circle.svg';
 import './Carrito.css';
+import BtnDelete from '../components/BtnDelete';
 
 
 class Carrito extends Component {
@@ -67,6 +68,7 @@ class Carrito extends Component {
                         <Link to='/pay-shopping-cart'>
                             <BtnBold>Pagar</BtnBold>
                         </Link>
+                        <BtnDelete>Eliminar</BtnDelete>  
                     </div>
                 </div>
             </div>

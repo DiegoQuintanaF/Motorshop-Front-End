@@ -88,16 +88,20 @@ class Home extends Component {
                   <h1>Cargando...</h1>
                 </div>
               ) : this.state.vehicles.map((item, index) => {
-                if (index > 3) return;
-                return (
-                  <div key={index} className="main__vehicle">
-                    <img src={item.image} alt="" />
-                    <h3>{item.name}</h3>
-                    <Link to={`/detalle/${item.id}`} className="main__links">
-                      <BtnLight>Ver más</BtnLight>
-                    </Link>
-                  </div> 
-                )
+                if (index > 3) {
+                  return (<div class="hidden-div"></div>)
+                }
+                else {
+                  return (
+                    <div key={index} className="main__vehicle">
+                      <img src={item.image} alt="" />
+                      <h3>{item.name}</h3>
+                      <Link to={`/detalle/${item.id}`} className="main__links">
+                        <BtnLight>Ver más</BtnLight>
+                      </Link>
+                    </div>
+                  )
+                }
               })
             }
           </div>

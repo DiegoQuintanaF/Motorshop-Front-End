@@ -95,3 +95,7 @@ h1 {
 .main__about--img img {
     max-width: 400px;
 }
+
+.hidden-div {
+    display: none;
+}
