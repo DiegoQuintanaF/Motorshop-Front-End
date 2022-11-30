@@ -93,7 +93,7 @@ class ViewVehicle extends Component {
                                 </div>
                                 <div>
                                     <h2>Ficha tecnica</h2>
-                                    <a href={vehicle.data_sheet}>
+                                    <a href={vehicle.data_sheet} target="_blank">
                                         <picture className="picture-download">
                                             <span>Descargar </span>
                                             <img src={PdfIcon} alt="" />

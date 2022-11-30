@@ -27,9 +27,9 @@ class Login extends Component {
                         token: `${response.token}`, 
                         status: true 
                     } );
+                    
+                    window.location.href = '/';
                 }
-                console.log(`Email: ${email} \nPassword: ${password}`);
-                console.log(this.state.token);
             })    
     }
 

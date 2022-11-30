@@ -6,7 +6,10 @@ class BtnDelete extends Component {
         const options = { method: 'GET' };
         fetch('https://sales-cart-cot.onrender.com/', options)
             .then(response => response.json())
-            .then(response => console.log("Deleted"))
+            .then(response => {
+                console.log("Deleted");
+                window.location.href = '/carrito';
+            })
             .catch(err => console.error(err));
     }
 
