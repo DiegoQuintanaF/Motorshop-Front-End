@@ -53,7 +53,7 @@ class Cotizar extends Component {
             alert('Debe aceptar el tratamiento de datos');
         }
 
-        if (vehicleId === '0' || name === '' || last_name === '' || email === '' || checkbox ) {
+        if (vehicleId !== '0' && name !== '' && last_name !== '' && email !== '' && checkbox) {
             alert('Formulario enviado correctamente');
             window.location.href = '/';
         }
